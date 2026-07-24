@@ -3,8 +3,18 @@ from foreman.graph import app
 
 
 def main():
-    result = app.invoke({"messages": [HumanMessage(content="Hello! What is the capital of France?")]})
-    print(result["messages"][-1].content)
+    print("--- Starting Foreman Wordle Demo ---")
+    
+    # Message 1: Ask the agent to start a game and guess 'CRANE'
+    print("\n[User]: Start a Wordle game and make your first guess 'CRANE'.")
+    result = app.invoke(
+        {"messages": [HumanMessage(content="Start a Wordle game and make your first guess 'CRANE'.")]}
+    )
+    
+    # Print agent conversation responses
+    for msg in result["messages"]:
+        if msg.type == "ai" and msg.content:
+            print(f"\n[Foreman]: {msg.content}")
 
 
 if __name__ == "__main__":
