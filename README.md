@@ -29,3 +29,6 @@ The dashboard will be available at `http://localhost:8123`
 ```bash
 python main.py
 ```
+
+
+On nixos run: export LD_LIBRARY_PATH=$NIX_LD_LIBRARY_PATH

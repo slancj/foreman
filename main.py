@@ -3,12 +3,13 @@ from foreman.graph import app
 
 
 def main():
-    print("--- Starting Foreman Wordle Demo ---")
+    print("--- Starting Foreman Demo ---")
     
-    # Message 1: Ask the agent to start a game and guess 'CRANE'
-    print("\n[User]: Start a Wordle game and make your first guess 'CRANE'.")
+    # Message 1: Ask the agent to start Minesweeper
+    print("\n[User]: Start a game of minesweeper and play it.")
     result = app.invoke(
-        {"messages": [HumanMessage(content="Start a Wordle game and make your first guess 'CRANE'.")]}
+        {"messages": [HumanMessage(content="Start a game of minesweeper and play it.")]},
+        config={"recursion_limit": 7},
     )
     
     # Print agent conversation responses
