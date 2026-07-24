@@ -1,7 +1,7 @@
 {
   "dependencies": ["."],
   "graphs": {
-    "agent": "./main.py:app"
+    "agent": "./src/foreman/graph.py:app"
   },
   "env": ".env"
 }
